@@ -2,18 +2,36 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title>Open Thoughts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Thoughts - A Philosophical Space</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="chat-container">
-    <div id="messages" class="messages"></div>
-
-    <div class="input-area">
-      <textarea id="postText" placeholder="Type your thoughts..."></textarea>
-      <button onclick="submitPost()">➤</button>
+    <div class="chat-header">
+      <h1>Open Thoughts</h1>
+      <div class="subtitle">A space for mindful contemplation</div>
     </div>
+    
+    <div id="messages" class="messages"></div>
+    
+    <div id="typingIndicator" class="typing-indicator" style="display: none;">
+      Someone is contemplating...
+    </div>
+    
+    <div class="input-area">
+      <textarea id="postText" placeholder="What thought emerges in this moment?..."></textarea>
+      <button onclick="submitPost()">→</button>
+    </div>
+  </div>
+  
+  <div class="online-indicator">
+    <div class="dot"></div>
+    <span id="onlineCount">Connected</span>
   </div>
 
   <script type="module" src="app.js"></script>
